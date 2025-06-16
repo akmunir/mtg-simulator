@@ -1,8 +1,14 @@
 @import "tailwindcss";
 
 
-
+.body {
+    @apply overflow-hidden h-full
+}
 .card {
-    @apply border border-solid border-b-black h-63 w-45 bg-red-100 rounded-xl absolute 
+    @apply border-1 border-solid border-black h-40 w-29 bg-[#222222] rounded-md hover:border-teal-200 hover:cursor-grab shadow-lg shadow-[#000000]  
+}
+
+.pos {
+    @apply fixed inset-192
 }
 

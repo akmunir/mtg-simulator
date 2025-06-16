@@ -19,20 +19,20 @@
   },
   "homepage": "https://github.com/akmunir/mtg-simulator#readme",
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.0.11",
-    "browser-sync-webpack-plugin": "^2.3.0",
+    "@tailwindcss/postcss": "^4.1.10",
+    "browser-sync-webpack-plugin": "^2.4.0",
     "css-loader": "^7.1.2",
-    "electron": "^35.0.1",
+    "electron": "^35.5.1",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.3",
-    "postcss": "^8.5.3",
+    "postcss": "^8.5.5",
     "postcss-loader": "^8.1.1",
-    "postcss-preset-env": "^10.1.5",
+    "postcss-preset-env": "^10.2.3",
     "style-loader": "^4.0.0",
-    "tailwindcss": "^4.0.13",
-    "webpack": "^5.98.0",
+    "tailwindcss": "^4.1.10",
+    "webpack": "^5.99.9",
     "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.0"
+    "webpack-dev-server": "^5.2.2"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.11",
