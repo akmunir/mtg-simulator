@@ -5,20 +5,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simulator</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Roboto', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
 </head>
 <body class=" m-0  h-screen flex flex-col  bg-[#222222]">
 <div class="header w-full h-auto border border-solid border-black">
-  <h1 class="text-white text-5xl">Playtest Deck Name</h1>
+  <h1 class="text-white text-5xl w-1/4 border border-solid border-white">Playtest Deck Name</h1>
   <div class="flex justify-center gap-4">
-    <button class=" text-white border border-solid border-white">Life:</button>
-    <button class=" text-white border border-solid border-white">Turn:</button>
-    <button class=" text-white border border-solid border-white">Draw</button>
-    <button class=" text-white border border-solid border-white">Search</button>
-    <button class=" text-white">Shuffle</button>
-    <button class=" text-white">Next Turn</button>
-    <button class=" text-white">Reset</button>
+    <div class="life-counter header-button">
+      <button class="header-button" id="change-health" > < </button>
+      <button class="header-button" id="change-health"><span class="text-lg">♡</span> :40</button>
+      <button class="header-button" id="change-health"> > </button>
+    </div>
+   
+    <button class="header-button">Turn :1</button>
+    <button class="header-button">Draw</button>
+    <button class="header-button">Search</button>
+    <button class="header-button">Shuffle</button>
+    <button class="header-button">Next Turn</button>
+    <button class="header-button">Reset</button>
   </div>
 </div>
 <div class="w-full h-full relative overflow-hidden p-5 border-[7px] border-solid border-[#465771] bg-[linear-gradient(to_right,rgba(135,136,136,0.1),_transparent_1px),_linear-gradient(to_bottom,_rgba(135,136,136,0.1)_1px,_transparent_1px)] bg-[size:15px_15px]"></div>
@@ -45,12 +61,12 @@
     </div>
 </div>
   <div class="w-2/4">
-    <div class="card pos bg-[url('https://cards.scryfall.io/large/front/e/e/eed76e15-6456-4ddc-addf-f0e6eff8bb6a.jpg?1721428773')] bg-cover "></div>
-    <div class="card pos bg-[url('https://cards.scryfall.io/large/front/4/3/4315d5ea-eb76-4378-a3da-5d5cdad809b8.jpg?1562816850')] bg-cover"></div>
-    <div class="card pos bg-[url('https://cards.scryfall.io/large/front/a/c/ac38a51f-9a3b-451c-b72d-6d4e0b296fbd.jpg?1594736187')] bg-cover"></div>          
-    <div class="card pos bg-[url('https://cards.scryfall.io/large/front/3/b/3bec2fa0-099a-42e8-ab5f-3d778a9c4d9e.jpg?1682208826')] bg-cover"></div>
-    <div class="card pos bg-[url('https://cards.scryfall.io/large/front/6/e/6e52d1a2-064f-4dcb-983d-322aec1776f8.jpg?1592673461')] bg-cover"></div>
-    <div class="card pos bg-[url('https://cards.scryfall.io/large/front/4/7/47033ba4-8f26-4a6b-97bd-5b366327325e.jpg?1632873386')] bg-cover"></div>
+    <div class="card moveable pos bg-[url('https://cards.scryfall.io/large/front/e/e/eed76e15-6456-4ddc-addf-f0e6eff8bb6a.jpg?1721428773')] bg-cover "></div>
+    <div class="card moveable pos bg-[url('https://cards.scryfall.io/large/front/4/3/4315d5ea-eb76-4378-a3da-5d5cdad809b8.jpg?1562816850')] bg-cover"></div>
+    <div class="card moveable pos bg-[url('https://cards.scryfall.io/large/front/a/c/ac38a51f-9a3b-451c-b72d-6d4e0b296fbd.jpg?1594736187')] bg-cover"></div>          
+    <div class="card moveable pos bg-[url('https://cards.scryfall.io/large/front/3/b/3bec2fa0-099a-42e8-ab5f-3d778a9c4d9e.jpg?1682208826')] bg-cover"></div>
+    <div class="card moveable pos bg-[url('https://cards.scryfall.io/large/front/6/e/6e52d1a2-064f-4dcb-983d-322aec1776f8.jpg?1592673461')] bg-cover"></div>
+    <div class="card moveable pos bg-[url('https://cards.scryfall.io/large/front/4/7/47033ba4-8f26-4a6b-97bd-5b366327325e.jpg?1632873386')] bg-cover"></div>
   </div>
 
 

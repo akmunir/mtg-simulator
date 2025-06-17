@@ -1,5 +1,6 @@
 import "./styles.css";
 
+
 let isDragging = false;
 let currentCard = null;
 let startX = 0, startY = 0;
@@ -30,8 +31,6 @@ function mouseMove(event) {
     newY = event.clientY - startY;
     currentCard.style.top = initialTop + newY + "px";
     currentCard.style.left = initialLeft + newX + "px";
-    console.log(newX, newY);
-    console.log(startX, startY);
 
 
 }
@@ -43,3 +42,31 @@ function mouseUp(e) {
     document.removeEventListener("mousemove", mouseMove);
     document.removeEventListener("mouseup", mouseUp);
 }
+
+const moveableCards = document.querySelectorAll(".card.moveable");
+console.log(moveableCards);
+moveableCards.forEach(card => {
+    card.addEventListener("dblclick", () => {
+        console.log("a");
+        card.classList.toggle("tapped")
+    })
+})
+
+function spreadCardsInHand() {
+    const cards = document.querySelectorAll(".card.moveable");
+    console.log(cards);
+    const totalCards = cards.length;
+    const spreadwidth = (window.innerWidth * 0.75) / (totalCards)
+     let index = 5;
+    console.log(spreadwidth);
+    cards.forEach( (card) => {
+        const xCoord = spreadwidth + index - card.offsetWidth;
+        const yCoord = window.innerHeight - card.offsetHeight - 10;
+        console.log(xCoord);
+        card.style.left = `${xCoord}px`;
+        card.style.top = `${yCoord}px`;
+        index += 150;
+    })
+}
+
+window.addEventListener("load", spreadCardsInHand);

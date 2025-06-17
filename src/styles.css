@@ -12,3 +12,17 @@
     @apply fixed inset-192
 }
 
+.header-button {
+    @apply text-white rounded-lg px-4
+}
+.header-button:hover {
+    @apply hover:bg-gray-600 shadow
+}
+
+#change-health {
+    @apply px-2
+}
+
+.tapped {
+    @apply rotate-[90deg]
+}
